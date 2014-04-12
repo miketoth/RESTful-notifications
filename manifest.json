@@ -1,0 +1,44 @@
+{
+    "name"        : "RESTful notifications",
+
+    "version"     : "1.0",
+
+    "description" : "Don't panic; its just birds chirping",
+
+    "background"  : {
+      "page":"background.html"
+    },
+
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+
+    "manifest_version":2,
+
+    "permissions": [
+        "tabs",
+        "http://*.facebook.com/*"
+    ],
+
+    "content_scripts"    : [
+        {
+            "exclude_globs": [  ],
+            "include_globs": [ "*" ],
+            "js": [
+                "js/libs/jquery-2.1.0.min.js",
+                "js/gmail.js"
+            ],
+
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+
+    "web_accessible_resources": [
+        "js/*",
+        "sounds/*"
+    ]
+}
