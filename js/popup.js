@@ -2,24 +2,30 @@
     setTimeout(function() {
         if (localStorage.accessToken) {
             var graphUrl = "https://graph.facebook.com/562093799/notifications?" + localStorage.accessToken;
+            var messageUrl = "https://graph.facebook.com/562093799/inbox?" + localStorage.accessToken;
 
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                var response = JSON.parse(xmlhttp.responseText);
-                getNotifications(response);
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    var response = JSON.parse(xmlhttp.responseText);
+                    getResponse(response);
                 }
             }
 
             xmlhttp.open("GET", graphUrl, true);
             xmlhttp.send();
+
+            // now check messages
+            xmlhttp.open("GET", messageUrl, true);
+            xmlhttp.send();
         }
-        query(); // recurse
-    }, 10000);
+    //    query(); // recurse
+    }, 1000);
 })();
 
+
 // make sure that if you don't respond to it that it backsoff exponentially
-function getNotifications(response) {
+function getResponse(response) {
 
     // get current time and compare it to most recent notification
     var current_time = new Date().getTime() / 1000;
@@ -33,6 +39,7 @@ function getNotifications(response) {
     // if less than 500 it is current enough that the user should be notified
     if(current_time - notification_time < 500 || true) {
         // make a sound!
+        console.log(response);
         var audio = new Audio("sounds/water-droplets-1.wav");
         audio.play();
     }

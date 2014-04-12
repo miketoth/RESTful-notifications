@@ -6,7 +6,7 @@
     "description" : "Don't panic; its just birds chirping",
 
     "background"  : {
-      "page":"background.html"
+      "page"  : "background.html"
     },
 
     "browser_action": {
@@ -33,7 +33,7 @@
                 "http://*/*",
                 "https://*/*"
             ],
-            "run_at": "document_start"
+            "run_at": "document_end"
         }
     ],
 
