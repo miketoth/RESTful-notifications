@@ -18,4 +18,9 @@ Why Sound?
 
 Visually the internet is a crowded space and audio is either annoying (remember when a song would start playing on someone's website and you weren't sure how to turn it off?) or a deliberate act, ie. time to listen to music on youtube or whatever. The background auditory space is completely empty besides some youtube videos that help you fall asleep.
 
+Why No Visuals?
+----------------
+
+I understand that alerting users that something is happening in their area with louder and more frequent bird chirping but not linking them to it forces them to take another step but I don't want to add to the visual noise of the browsing experience and in my own testing the extra step has not been too large of a deterrent.
+
 
