@@ -16,6 +16,6 @@ I want to reduce the visual and audio __screaming__ and replace it with calm and
 Why Sound?
 ----------
 
-Visually the internet is a crowded space and audio is either annoying (remember when a song would start playing on someone's website and you weren't sure how to turn it off?) or a deliberate act, ie. time to listen to music on youtube or whatever. 
+Visually the internet is a crowded space and audio is either annoying (remember when a song would start playing on someone's website and you weren't sure how to turn it off?) or a deliberate act, ie. time to listen to music on youtube or whatever. The background auditory space is completely empty besides some youtube videos that help you fall asleep.
 
 
